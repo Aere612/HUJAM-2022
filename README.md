@@ -29,15 +29,15 @@ pew pew gun
 
 WEAPONS left click fire,right click subclass weapon
 pew pew gun
-sniper (-rate of fire +damage + velocity) * Asassin:10 sn de bir super mermi / 
+-sniper (-rate of fire +damage + velocity) * Asassin:10 sn de bir super mermi / 
                                             Hunter: flash low distance 5sn cd
-laser (+unlimited(almost) rate of fire -damage) * Reaper:8 side lasers for 4 sec 14 sec cd / 
+-laser (+unlimited(almost) rate of fire -damage) * Reaper:8 side lasers for 4 sec 14 sec cd / 
                                                   Annihilator:10x damage 2x width for 1 sec 10 sec cd
-shotgun (5 spread bullets) * Turbo; 5 second 1.5x speed 10 sec cd / 
+-shotgun (5 spread bullets) * Turbo; 5 second 1.5x speed 10 sec cd / 
                              Bayonet: 5x ram damage + ram damage immunity 5 sec 15 sec cd
-rocket (long range,blast,targeting) * Bombardier: 15 missiles to 1 direction,not targeting 15 sec cd /
+-rocket (long range,blast,targeting) * Bombardier: 15 missiles to 1 direction,not targeting 15 sec cd /
                                       Detonator: Makes small radius explosions around player 15 sec cd 
-machine gun(highr rof) * Patriot: Immune for 3 sec 15 sec cd / 
+-machine gun(highr rof) * Patriot: Immune for 3 sec 15 sec cd / 
                          Tank:%25 max hp shield 30 sec cd
 
 SKILLS
