@@ -1,17 +1,25 @@
 # HUJAM 2022
- 
-Oyuncu(ufak mavi bir uzay gemisi) ekranin altindan ekrana girer
-arka planda parcalanmis bir gezegen yukardan asagi inmeye baslar (sanki oyuncu gezegene yaklasiyormus gibi)
-yukardan cok hizli, bize benzeyen(turuncu/kirmizi) ve guclu bir dusman belirir 
-Ani bir sekilde bossun can bari bizim can barimiz bir suru skillimiz ve uyari isaretleri belirir ekranda
-oyuncu oyunu bilmedigi icin(ve biraz da hile ile) kaybeder
-mavi patlama olur ekran glitchlenir ekranda kronolojik cetvel gelir 3010 den 3000 e gider hizlica
-ekranda mavi bir patlama ile oyuncu belirir
-tum yetenekleri kaybolmustur max cani azdir
-oyun roguelike uzayda 2d shooter oyunu her level gecilince oyuncu 3 yetenekten birini secer kendine ekler yil 1 ilerler
-gorseller, sesler ve hissiyat nova drift gibi(buraya gelince geldim diyin oyunu gostercem)
-3020 ye gelince oyuncu gecen seferki bossfightin aynisi bu sefer hile yok sadece
-Bossu yenince animasyon oynar o da zamanda geri gider megerse aralarinda sonsuza kadar savastiklari bir dongu varmis
+# Oyunun Tarzı
+- Oyun roguelike uzayda 2d shooter oyunu
+# Oyunun Başlangıcı
+- Oyuncu (ufak mavi bir uzay gemisi) ekranin altindan ekrana girer.
+- Arka planda parcalanmis bir gezegen yukardan asagi inmeye baslar (sanki oyuncu gezegene yaklasiyormus gibi)
+- Yukardan cok hizli, bize benzeyen(turuncu/kirmizi) ve guclu bir dusman belirir.
+- Ani bir sekilde bossun can bari bizim can barimiz bir suru skillimiz ve uyari isaretleri belirir ekranda.
+- Oyuncu oyunu bilmedigi icin(ve biraz da hile ile) kaybeder
+- Mavi patlama olur ekran glitchlenir ekranda kronolojik cetvel gelir 3010 den 3000 e gider hizlica
+- ekranda mavi bir patlama ile oyuncu belirir
+- tum yetenekleri kaybolmustur max cani azdir
+
+# Oyunun Döngüsü
+- Oyun levellardan oluşacak ve her level geçildiğinde oyuncu 3 yetenekten birini kendine ekleyecek.
+- Her leveldan sonra 1 yıl geçecek.
+- 3010 yılına gelince boss fight olacak.
+- Bossu yeninca animasyon girer ve aralarında sonsuz bir savaş döngüsü olduğu ortaya çıkar.
+- 
+# Mekanikler
+- Her level gecilince oyuncu 3 yetenekten birini secer kendine ekler yil 1 ilerler
+
 
 START STATS
 100 hp
