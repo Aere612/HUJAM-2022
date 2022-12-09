@@ -72,8 +72,8 @@
 # ENEMIES
 - Random wandering enemies   RWE
 - Chasing enemies   CE
-- Shooting and standing  enemies    SASE
-- Chasing and Shooting enemies    CASE
+- Standing and shooting enemies    SASE
+- Chasing and shooting enemies    CASE
 - Boss B
 
 # LEVELS
@@ -99,7 +99,7 @@
 # NOTES
 - bps:bullet per second
 - dpb:damage per bullet
-- bs: bullet speed :)
+- bs: bullet speed 
 
 # ARTS
 
