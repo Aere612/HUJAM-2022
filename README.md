@@ -16,7 +16,7 @@
 - Her leveldan sonra 1 yıl geçecek.
 - 3010 yılına gelince boss fight olacak.
 - Bossu yeninca animasyon girer ve aralarında sonsuz bir savaş döngüsü olduğu ortaya çıkar.
-- 
+
 # Mekanikler
 - Her level gecilince oyuncu 3 yetenekten birini secer kendine ekler yil 1 ilerler
 
@@ -31,7 +31,7 @@
 - Sol tık ateş edecek, sağ tık özel özellik kullanılacak.
 ## Pew Pew Gun
 ## Sniper 
-  - rate of fire +damage + velocity
+  - -rate of fire +damage + velocity
   
   Özellikler:
   - Assasin: 10 sn de bir super mermi 
@@ -63,11 +63,11 @@
    
 
 # SKILLS
-- 100 max hp
-- 1 dmg
-- 0.25x bps(width for laser)
-- 0.1x speed
-- 0.25x bs
+- +100 max hp
+- +1 dmg
+- +0.25x bps(width for laser)
+- +0.1x speed
+- +0.25x bs
 
 # ENEMIES
 - Random wandering enemies   RWE
