@@ -62,21 +62,21 @@
   - Tank:%25 max hp shield 30 sec cd
    
 
-SKILLS
+# SKILLS
 +100 max hp
 +1 dmg
 +0.25x bps(width for laser)
 +0.1x speed
 +0.25x bs
 
-ENEMIES
+# ENEMIES
 Random wandering enemies   RWE
 Chasing enemies   CE
 Shooting and standing  enemies    SASE
 Chasing and Shooting enemies    CASE
 Boss B
 
-#LEVELS
+# LEVELS
 
 - 1 RWE/  C : choose 1 from 3 out of 5 classes
 - 2 RWE+CE/ S : choose 1 from 3 out of 5 skills
