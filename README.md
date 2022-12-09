@@ -63,18 +63,18 @@
    
 
 # SKILLS
-+100 max hp
-+1 dmg
-+0.25x bps(width for laser)
-+0.1x speed
-+0.25x bs
+- 100 max hp
+- 1 dmg
+- 0.25x bps(width for laser)
+- 0.1x speed
+- 0.25x bs
 
 # ENEMIES
-Random wandering enemies   RWE
-Chasing enemies   CE
-Shooting and standing  enemies    SASE
-Chasing and Shooting enemies    CASE
-Boss B
+- Random wandering enemies   RWE
+- Chasing enemies   CE
+- Shooting and standing  enemies    SASE
+- Chasing and Shooting enemies    CASE
+- Boss B
 
 # LEVELS
 
