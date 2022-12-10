@@ -14,7 +14,7 @@ public class ControllerActivator : MonoBehaviour
         {
             playerScript.enabled = false;
             pewPewGun.SetActive(false);
-            Invoke("SetAnimator", 7);
+            Invoke("SetAnimator", 10f);
         }
         else
         {
