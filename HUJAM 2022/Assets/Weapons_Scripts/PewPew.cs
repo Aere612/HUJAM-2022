@@ -8,7 +8,7 @@ public class PewPew : MonoBehaviour
     public bool allowed = true;
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse1) && allowed)
+        if (Input.GetKey(KeyCode.Mouse0) && allowed)
         {
             allowed = false;
             StartCoroutine(BulletSpawner());
@@ -16,8 +16,8 @@ public class PewPew : MonoBehaviour
     }    
     IEnumerator BulletSpawner()
     {
-        currentBullet = Instantiate(bullet);
-        yield return new WaitForSeconds(1 / GameObject.Find("Player").GetComponent<PlayerStats>().bulletPerSecond);
+        currentBullet = Instantiate(bullet,transform.position,transform.rotation);
+        yield return new WaitForSeconds(1 / GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletPerSecond);
         allowed = true;
     }
 }

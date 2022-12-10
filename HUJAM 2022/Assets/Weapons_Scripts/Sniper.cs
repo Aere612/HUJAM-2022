@@ -8,17 +8,17 @@ public class Sniper : MonoBehaviour
     public bool allowed = true,subAllowed=true,isHunter=false,isAssassin=false;
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse1) && allowed)
+        if (Input.GetKey(KeyCode.Mouse0) && allowed)
         {
             allowed = false;
             StartCoroutine(BulletSpawner());
         }
-        if (Input.GetKey(KeyCode.Mouse2) && subAllowed && isHunter)
+        if (Input.GetKey(KeyCode.Mouse1) && subAllowed && isHunter)
         {
             subAllowed = false;
             StartCoroutine(Hunter());
         }
-        if (Input.GetKey(KeyCode.Mouse2) && subAllowed && isAssassin)
+        if (Input.GetKey(KeyCode.Mouse1) && subAllowed && isAssassin)
         {
             subAllowed = false;
             StartCoroutine(Assassin());
@@ -26,8 +26,8 @@ public class Sniper : MonoBehaviour
     }
     IEnumerator BulletSpawner()
     {
-        currentBullet = Instantiate(bullet);
-        yield return new WaitForSeconds(1 / GameObject.Find("Player").GetComponent<PlayerStats>().bulletPerSecond);
+        currentBullet = Instantiate(bullet, transform.position, transform.rotation);
+        yield return new WaitForSeconds(1 / GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletPerSecond);
         allowed = true;
     }
     IEnumerator Hunter()
@@ -38,7 +38,7 @@ public class Sniper : MonoBehaviour
     }
     IEnumerator Assassin()
     {
-        currentBullet = Instantiate(bullet);
+        currentBullet = Instantiate(bullet, transform.position, transform.rotation);
         currentBullet.GetComponent<Bullet>().damage = currentBullet.GetComponent<Bullet>().damage *5;
         yield return new WaitForSeconds(10f);
         subAllowed = true;

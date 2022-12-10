@@ -12,6 +12,6 @@ public class Bullet : MonoBehaviour
     }
     void Update()
     {
-        transform.Translate(speed,0f,transform.position.z,Space.Self);
+        transform.Translate(0f, speed, transform.position.z,Space.Self);
     }
 }
