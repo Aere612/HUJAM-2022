@@ -8,17 +8,17 @@ public class Shotgun : MonoBehaviour
     public bool allowed = true, subAllowed = true, isTurbo = false, isBayonet = false;
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse1) && allowed)
+        if (Input.GetKey(KeyCode.Mouse0) && allowed)
         {
             allowed = false;
             StartCoroutine(BulletSpawner());
         }
-        if (Input.GetKey(KeyCode.Mouse2) && subAllowed && isTurbo)
+        if (Input.GetKey(KeyCode.Mouse1) && subAllowed && isTurbo)
         {
             subAllowed = false;
             StartCoroutine(Turbo());
         }
-        if (Input.GetKey(KeyCode.Mouse2) && subAllowed && isBayonet)
+        if (Input.GetKey(KeyCode.Mouse1) && subAllowed && isBayonet)
         {
             subAllowed = false;
             StartCoroutine(Bayonet());
