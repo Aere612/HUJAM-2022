@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
+    public float maxPlayerHp;
     public float playerHp = 100.0f;
     public float movementSpeed = 1.0f;
     public float bulletPerSecond = 1.0f;
@@ -12,10 +13,10 @@ public class PlayerStats : MonoBehaviour
 
     private void Start()
     {
-        playerHp = PlayerPrefs.GetFloat("hp");
+        /*playerHp = PlayerPrefs.GetFloat("hp");
         movementSpeed = PlayerPrefs.GetFloat("movementSpeed");
         bulletPerSecond = PlayerPrefs.GetFloat("bulletPerSecond");
         damagePerBullet = PlayerPrefs.GetFloat("damagePerBullet");
-        bulletSpeed = PlayerPrefs.GetFloat("bulletSpeed");
+        bulletSpeed = PlayerPrefs.GetFloat("bulletSpeed");*/
     }
 }

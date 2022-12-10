@@ -554,6 +554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7b8c81924c55242a17cb8cb691a5a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxPlayerHp: 100
   playerHp: 100
   movementSpeed: 0.02
   bulletPerSecond: 1
@@ -662,6 +663,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98dae2a16f43f484b97b45f3686af03a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHp: 0
+  movementSpeed: 0
+  bulletPerSecond: 0
+  damagePerBullet: 0
+  bulletSpeed: 0
 --- !u!1 &295150901
 GameObject:
   m_ObjectHideFlags: 0
@@ -5889,6 +5895,10 @@ PrefabInstance:
     - target: {fileID: 5554902207881767681, guid: 58d3f6d67b57f7f46828a48dbd1564d5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5554902207881767692, guid: 58d3f6d67b57f7f46828a48dbd1564d5, type: 3}
+      propertyPath: m_Mass
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5554902207881767693, guid: 58d3f6d67b57f7f46828a48dbd1564d5, type: 3}
       propertyPath: m_Name
