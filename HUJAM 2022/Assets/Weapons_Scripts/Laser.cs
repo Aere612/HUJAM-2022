@@ -27,51 +27,43 @@ public class Laser : MonoBehaviour
     IEnumerator BulletSpawner()
     {
         currentBullet = Instantiate(bullet, transform.position, transform.rotation);
-        currentBullet.transform.localScale=new(transform.localScale.x,transform.localScale.y+ GameObject.Find("Game Manager Obejct").GetComponent<PlayerStats>().bulletSpeed, transform.localScale.z);
-        yield return new WaitForSeconds(0.1f/GameObject.Find("Game Manager Obejct").GetComponent<PlayerStats>().bulletPerSecond);
+        yield return new WaitForSeconds(0.000001f);
+        currentBullet.transform.localScale=new(currentBullet.transform.localScale.x + GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletSpeed, currentBullet.transform.localScale.y+1f , currentBullet.transform.localScale.z);
+        yield return new WaitForSeconds(0.1f/GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletPerSecond);
         allowed = true;
     }
     IEnumerator Reaper()
     {
-        for (int counter=0;counter!= 4 * GameObject.Find("Game Manager Obejct").GetComponent<PlayerStats>().bulletPerSecond; counter++)
+        for (int counter=0;counter!= 4 * GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletPerSecond; counter++)
         {
             currentBullet = Instantiate(bullet, transform.position, transform.rotation);
-            currentBullet.transform.localScale = new(transform.localScale.x, transform.localScale.y + GameObject.Find("Game Manager Obejct").GetComponent<PlayerStats>().bulletSpeed, transform.localScale.z);
-            currentBullet.transform.rotation = new(currentBullet.transform.rotation.x, currentBullet.transform.rotation.y, currentBullet.transform.rotation.z, 0f);
+            currentBullet.transform.localScale = new(currentBullet.transform.localScale.x, currentBullet.transform.localScale.y + GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletSpeed , currentBullet.transform.localScale.z); currentBullet.transform.rotation = new(currentBullet.transform.rotation.x, currentBullet.transform.rotation.y, currentBullet.transform.rotation.z, 0f);
             currentBullet = Instantiate(bullet, transform.position, transform.rotation);
-            currentBullet.transform.localScale = new(transform.localScale.x, transform.localScale.y + GameObject.Find("Game Manager Obejct").GetComponent<PlayerStats>().bulletSpeed, transform.localScale.z);
-            currentBullet.transform.rotation = new(currentBullet.transform.rotation.x, currentBullet.transform.rotation.y, currentBullet.transform.rotation.z+45, 0f);
+            currentBullet.transform.localScale = new(currentBullet.transform.localScale.x, currentBullet.transform.localScale.y + GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletSpeed , currentBullet.transform.localScale.z); currentBullet.transform.rotation = new(currentBullet.transform.rotation.x, currentBullet.transform.rotation.y, currentBullet.transform.rotation.z+45, 0f);
             currentBullet = Instantiate(bullet, transform.position, transform.rotation);
-            currentBullet.transform.localScale = new(transform.localScale.x, transform.localScale.y + GameObject.Find("Game Manager Obejct").GetComponent<PlayerStats>().bulletSpeed, transform.localScale.z);
-            currentBullet.transform.rotation = new(currentBullet.transform.rotation.x, currentBullet.transform.rotation.y, currentBullet.transform.rotation.z+90, 0f);
+            currentBullet.transform.localScale = new(currentBullet.transform.localScale.x, currentBullet.transform.localScale.y + GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletSpeed , currentBullet.transform.localScale.z); currentBullet.transform.rotation = new(currentBullet.transform.rotation.x, currentBullet.transform.rotation.y, currentBullet.transform.rotation.z+90, 0f);
             currentBullet = Instantiate(bullet, transform.position, transform.rotation);
-            currentBullet.transform.localScale = new(transform.localScale.x, transform.localScale.y + GameObject.Find("Game Manager Obejct").GetComponent<PlayerStats>().bulletSpeed, transform.localScale.z);
-            currentBullet.transform.rotation = new(currentBullet.transform.rotation.x, currentBullet.transform.rotation.y, currentBullet.transform.rotation.z+135, 0f);
+            currentBullet.transform.localScale = new(currentBullet.transform.localScale.x, currentBullet.transform.localScale.y + GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletSpeed , currentBullet.transform.localScale.z); currentBullet.transform.rotation = new(currentBullet.transform.rotation.x, currentBullet.transform.rotation.y, currentBullet.transform.rotation.z+135, 0f);
             currentBullet = Instantiate(bullet, transform.position, transform.rotation);
-            currentBullet.transform.localScale = new(transform.localScale.x, transform.localScale.y + GameObject.Find("Game Manager Obejct").GetComponent<PlayerStats>().bulletSpeed, transform.localScale.z);
-            currentBullet.transform.rotation = new(currentBullet.transform.rotation.x, currentBullet.transform.rotation.y, currentBullet.transform.rotation.z+180, 0f);
+            currentBullet.transform.localScale = new(currentBullet.transform.localScale.x, currentBullet.transform.localScale.y + GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletSpeed , currentBullet.transform.localScale.z); currentBullet.transform.rotation = new(currentBullet.transform.rotation.x, currentBullet.transform.rotation.y, currentBullet.transform.rotation.z+180, 0f);
             currentBullet = Instantiate(bullet, transform.position, transform.rotation);
-            currentBullet.transform.localScale = new(transform.localScale.x, transform.localScale.y + GameObject.Find("Game Manager Obejct").GetComponent<PlayerStats>().bulletSpeed, transform.localScale.z);
-            currentBullet.transform.rotation = new(currentBullet.transform.rotation.x, currentBullet.transform.rotation.y, currentBullet.transform.rotation.z+225, 0f);
+            currentBullet.transform.localScale = new(currentBullet.transform.localScale.x, currentBullet.transform.localScale.y + GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletSpeed , currentBullet.transform.localScale.z); currentBullet.transform.rotation = new(currentBullet.transform.rotation.x, currentBullet.transform.rotation.y, currentBullet.transform.rotation.z+225, 0f);
             currentBullet = Instantiate(bullet, transform.position, transform.rotation);
-            currentBullet.transform.localScale = new(transform.localScale.x, transform.localScale.y + GameObject.Find("Game Manager Obejct").GetComponent<PlayerStats>().bulletSpeed, transform.localScale.z);
-            currentBullet.transform.rotation = new(currentBullet.transform.rotation.x, currentBullet.transform.rotation.y, currentBullet.transform.rotation.z+270, 0f);
+            currentBullet.transform.localScale = new(currentBullet.transform.localScale.x, currentBullet.transform.localScale.y + GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletSpeed , currentBullet.transform.localScale.z); currentBullet.transform.rotation = new(currentBullet.transform.rotation.x, currentBullet.transform.rotation.y, currentBullet.transform.rotation.z+270, 0f);
             currentBullet = Instantiate(bullet, transform.position, transform.rotation);
-            currentBullet.transform.localScale = new(transform.localScale.x, transform.localScale.y + GameObject.Find("Game Manager Obejct").GetComponent<PlayerStats>().bulletSpeed, transform.localScale.z);
-            currentBullet.transform.rotation = new(currentBullet.transform.rotation.x, currentBullet.transform.rotation.y, currentBullet.transform.rotation.z+315, 0f);
-            yield return new WaitForSeconds(0.1f / GameObject.Find("Game Manager Obejct").GetComponent<PlayerStats>().bulletPerSecond);
+            currentBullet.transform.localScale = new(currentBullet.transform.localScale.x, currentBullet.transform.localScale.y + GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletSpeed , currentBullet.transform.localScale.z); currentBullet.transform.rotation = new(currentBullet.transform.rotation.x, currentBullet.transform.rotation.y, currentBullet.transform.rotation.z+315, 0f);
+            yield return new WaitForSeconds(0.1f / GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletPerSecond);
         }
         yield return new WaitForSeconds(10f);
         subAllowed = true;
     }
     IEnumerator Annihilator()
     {
-        for (int counter = 0; counter != 1 * GameObject.Find("Game Manager Obejct").GetComponent<PlayerStats>().bulletPerSecond; counter++)
+        for (int counter = 0; counter != 1 * GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletPerSecond; counter++)
         {
             currentBullet = Instantiate(bullet, transform.position, transform.rotation);
-            currentBullet.transform.localScale = new(transform.localScale.x, transform.localScale.y + GameObject.Find("Game Manager Obejct").GetComponent<PlayerStats>().bulletSpeed*2, transform.localScale.z);
-            currentBullet.GetComponent<Bullet>().damage = currentBullet.GetComponent<Bullet>().damage * 5;
-            yield return new WaitForSeconds(0.1f / GameObject.Find("Game Manager Obejct").GetComponent<PlayerStats>().bulletPerSecond);
+            currentBullet.transform.localScale = new(currentBullet.transform.localScale.x, currentBullet.transform.localScale.y + GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletSpeed , currentBullet.transform.localScale.z); currentBullet.GetComponent<Bullet>().damage = currentBullet.GetComponent<Bullet>().damage * 5;
+            yield return new WaitForSeconds(0.1f / GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletPerSecond);
         }
         yield return new WaitForSeconds(9f);
         subAllowed = true;

@@ -31,7 +31,7 @@ public class Shotgun : MonoBehaviour
             currentBullet = Instantiate(bullet);
             currentBullet.transform.rotation = new(currentBullet.transform.rotation.x, currentBullet.transform.rotation.y, currentBullet.transform.rotation.z + (Random.Range(-45, 45)), 0f);
         }
-        yield return new WaitForSeconds(1 / GameObject.Find("Player").GetComponent<PlayerStats>().bulletPerSecond);
+        yield return new WaitForSeconds(1 / GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletPerSecond);
         allowed = true;
     }
     IEnumerator Turbo()

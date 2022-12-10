@@ -47,3 +47,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: alwaysVisible
+    uniqueID: 2801502687
+    locked: 0

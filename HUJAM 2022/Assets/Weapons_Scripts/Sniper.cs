@@ -32,13 +32,14 @@ public class Sniper : MonoBehaviour
     }
     IEnumerator Hunter()
     {
-        transform.Translate(3f,0f,0f,Space.Self);
+        GameObject.Find("Player").transform.Translate(0f,3f,0f,Space.Self);
         yield return new WaitForSeconds(5f);
         subAllowed = true;
     }
     IEnumerator Assassin()
     {
         currentBullet = Instantiate(bullet, transform.position, transform.rotation);
+        yield return new WaitForSeconds(0.0001f);
         currentBullet.GetComponent<Bullet>().damage = currentBullet.GetComponent<Bullet>().damage *5;
         yield return new WaitForSeconds(10f);
         subAllowed = true;
