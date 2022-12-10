@@ -5,15 +5,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     Rigidbody2D rb;
-    public GameObject bullet;
-
-    public int playerHp;
-    public float movementSpeed;
-
-    public int weaponTypeIndex;
-    public float bulletPerSecond;
-    public float damagePerBullet;
-    public float bulletSpeed;
 
     void Start()
     {
@@ -34,12 +25,8 @@ public class Player : MonoBehaviour
         if(Input.GetKey(KeyCode.W))
         {
             //Hareketin objenin açýsýnýn ilerisine göre yapýlmasý
-            rb.AddForce(transform.up * movementSpeed, ForceMode2D.Impulse);
+            rb.AddForce(transform.up * GameObject.Find("GameObject Manager Object").GetComponent<PlayerStats>().movementSpeed, ForceMode2D.Impulse);
 
-        }
-        if(Input.GetMouseButtonDown(0))
-        {
-            Instantiate(bullet, transform.position, transform.rotation);
         }
     }
 }

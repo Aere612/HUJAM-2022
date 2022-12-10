@@ -18,7 +18,7 @@ public class PewPew : MonoBehaviour
     IEnumerator BulletSpawner()
     {
         currentBullet = Instantiate(bullet);
-        yield return new WaitForSeconds(1 / GameObject.Find("Player").GetComponent<Player>().bulletPerSecond);
+        yield return new WaitForSeconds(1 / GameObject.Find("Player").GetComponent<PlayerStats>().bulletPerSecond);
         allowed = true;
     }
 }
