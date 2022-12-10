@@ -8,17 +8,17 @@ public class Assault : MonoBehaviour
     public bool allowed = true, subAllowed = true, isPatriot = false, isTank = false;
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse1) && allowed)
+        if (Input.GetKey(KeyCode.Mouse0) && allowed)
         {
             allowed = false;
             StartCoroutine(BulletSpawner());
         }
-        if (Input.GetKey(KeyCode.Mouse2) && subAllowed && isPatriot)
+        if (Input.GetKey(KeyCode.Mouse1) && subAllowed && isPatriot)
         {
             subAllowed = false;
             StartCoroutine(Patriot());
         }
-        if (Input.GetKey(KeyCode.Mouse2) && subAllowed && isTank)
+        if (Input.GetKey(KeyCode.Mouse1) && subAllowed && isTank)
         {
             subAllowed = false;
             StartCoroutine(Tank());
@@ -27,7 +27,7 @@ public class Assault : MonoBehaviour
     IEnumerator BulletSpawner()
     {
         currentBullet = Instantiate(bullet, transform.position, transform.rotation); ;
-        yield return new WaitForSeconds(1 / GameObject.Find("Player").GetComponent<PlayerStats>().bulletPerSecond);
+        yield return new WaitForSeconds(1 / GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletPerSecond);
         allowed = true;
     }
     IEnumerator Patriot()
