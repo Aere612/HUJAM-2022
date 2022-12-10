@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
         if(Input.GetKey(KeyCode.W))
         {
             //Hareketin objenin açýsýnýn ilerisine göre yapýlmasý
-            rb.AddForce(transform.up * GameObject.Find("GameObject Manager Object").GetComponent<PlayerStats>().movementSpeed, ForceMode2D.Impulse);
+            rb.AddForce(transform.up * GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().movementSpeed, ForceMode2D.Impulse);
 
         }
     }
