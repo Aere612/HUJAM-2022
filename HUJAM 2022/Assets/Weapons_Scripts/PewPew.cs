@@ -13,7 +13,6 @@ public class PewPew : MonoBehaviour
             allowed = false;
             StartCoroutine(BulletSpawner());
         }
-        
     }    
     IEnumerator BulletSpawner()
     {

@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
         // Mouse konumunun ve bu konuma göre açýnýn hesaplanmasý
         Vector3 mousePos = Input.mousePosition;
         mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-        Vector2 dir = new Vector2(mousePos.x - transform.position.x, mousePos.y - transform.position.y);
+        Vector2 dir = new(mousePos.x - transform.position.x, mousePos.y - transform.position.y);
 
         //Objeyi açýya göre çevrilmesi
         transform.up = dir;

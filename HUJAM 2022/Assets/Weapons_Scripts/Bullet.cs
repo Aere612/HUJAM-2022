@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float damage=1f,speed=0.1f;
+    public float damage,speed;
+    private void Start()
+    {
+        damage = GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().damagePerBullet;
+        speed = GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletSpeed;
+    }
     void Update()
     {
-        transform.Translate(new Vector2(speed,0f));
+        transform.Translate(speed,0f,transform.position.z,Space.Self);
     }
 }
