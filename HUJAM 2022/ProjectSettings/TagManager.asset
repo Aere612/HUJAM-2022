@@ -3,12 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - UstSp
+  - AltSp
+  - SolSp
+  - SagSp
+  - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Post
   - Water
   - UI
   - 
