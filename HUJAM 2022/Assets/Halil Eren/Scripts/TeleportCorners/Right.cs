@@ -8,7 +8,7 @@ public class Right : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.transform.position = new Vector2(collision.transform.position.x -23, collision.transform.position.y);
+            collision.gameObject.transform.position = new Vector2(collision.transform.position.x -22, collision.transform.position.y);
         }
     }
 }
