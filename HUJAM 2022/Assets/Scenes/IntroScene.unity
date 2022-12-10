@@ -1005,10 +1005,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPlayerHp: 0
   playerHp: 100
-  movementSpeed: 0.01
-  bulletPerSecond: 1
+  movementSpeed: 0.02
+  bulletPerSecond: 3
   damagePerBullet: 1
-  bulletSpeed: 0.01
+  bulletSpeed: 0.03
 --- !u!4 &1651052836
 Transform:
   m_ObjectHideFlags: 0
