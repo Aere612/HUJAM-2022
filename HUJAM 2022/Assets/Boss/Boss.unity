@@ -164,6 +164,8 @@ GameObject:
   m_Component:
   - component: {fileID: 333695781}
   - component: {fileID: 333695780}
+  - component: {fileID: 333695782}
+  - component: {fileID: 333695783}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -243,6 +245,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &333695782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333695779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1119afd2acfd95f489efadcb3168021a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &333695783
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333695779}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.1
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &582037748
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,13 +334,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 910742933}
+  - component: {fileID: 910742934}
   m_Layer: 0
   m_Name: assault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &910742933
 Transform:
   m_ObjectHideFlags: 0
@@ -321,6 +357,24 @@ Transform:
   m_Father: {fileID: 333695781}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &910742934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910742932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ed044fbea8acf40aec777aa0ccbd30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 6079509189384377777, guid: 7c8f052b626d88a43ad3b1d95bea5bd1, type: 3}
+  currentBullet: {fileID: 0}
+  allowed: 1
+  subAllowed: 1
+  isPatriot: 0
+  isTank: 1
 --- !u!1 &977519257
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPlayerHp: 0
   playerHp: 100
-  movementSpeed: 1
+  movementSpeed: 0.01
   bulletPerSecond: 1
   damagePerBullet: 1
   bulletSpeed: 0.01
@@ -437,7 +491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1399887890
 Transform:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public float maxPlayerHp;
+    public float maxPlayerHp = 100f;
     public float playerHp = 100.0f;
     public float movementSpeed = 1.0f;
     public float bulletPerSecond = 1.0f;
