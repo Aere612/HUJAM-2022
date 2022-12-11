@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public float maxPlayerHp = 100f;
-    public float playerHp = 100.0f;
-    public float movementSpeed = 1.0f;
-    public float bulletPerSecond = 1.0f;
-    public float damagePerBullet = 1.0f;
-    public float bulletSpeed = 1.0f;
+    public int weaponIndex;
+    public float maxPlayerHp;
+    public float playerHp;
+    public float movementSpeed;
+    public float bulletPerSecond;
+    public float damagePerBullet;
+    public float bulletSpeed;
 
     private void Start()
     {
-        /*playerHp = PlayerPrefs.GetFloat("hp");
+        weaponIndex = PlayerPrefs.GetInt("weaponIndex");
+        playerHp = PlayerPrefs.GetFloat("playerHp");
         movementSpeed = PlayerPrefs.GetFloat("movementSpeed");
         bulletPerSecond = PlayerPrefs.GetFloat("bulletPerSecond");
-        damagePerBullet = PlayerPrefs.GetFloat("damagePerBullet");
-        bulletSpeed = PlayerPrefs.GetFloat("bulletSpeed");*/
+        damagePerBullet = PlayerPrefs.GetFloat("damage");
+        bulletSpeed = PlayerPrefs.GetFloat("bulletSpeed");
     }
 }

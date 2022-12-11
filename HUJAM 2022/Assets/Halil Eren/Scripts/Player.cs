@@ -4,11 +4,36 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public int weaponIndex;
+    public GameObject pewpew, sniper, laser, shootgun, assault;
+    public Animator engineAnimator;
     Rigidbody2D rb;
 
     void Start()
     {
+        weaponIndex = PlayerPrefs.GetInt("weaponIndex");
+
         rb = GetComponent<Rigidbody2D>();
+
+        switch(weaponIndex)
+        {
+            case 0:
+                pewpew.SetActive(true);
+                break;
+            case 1:
+                sniper.SetActive(true);
+                break;
+            case 2:
+                laser.SetActive(true);
+                break;
+            case 3:
+                shootgun.SetActive(true);
+                break;
+            case 4:
+                assault.SetActive(true);
+                break;
+        }
+
     }
 
     void Update()
@@ -26,7 +51,12 @@ public class Player : MonoBehaviour
         {
             //Hareketin objenin açýsýnýn ilerisine göre yapýlmasý
             rb.AddForce(transform.up * GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().movementSpeed, ForceMode2D.Impulse);
+            engineAnimator.SetBool("force",true);
 
+        }
+        else
+        {
+            engineAnimator.SetBool("force", false);
         }
     }
 }
