@@ -305,7 +305,7 @@ MonoBehaviour:
   sniper: {fileID: 7844932932682386951}
   laser: {fileID: 7844932932670668119}
   shootgun: {fileID: 7844932934074628725}
-  assault: {fileID: 7844932934074628725}
+  assault: {fileID: 7844932933291962578}
   engineAnimator: {fileID: 0}
 --- !u!50 &7844932933735050849
 Rigidbody2D:
