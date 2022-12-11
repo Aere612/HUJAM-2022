@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject finishLevel;
+    Player player;
+    PlayerStats playerStats;
+    public GameObject finishLevel, gameOverScreen, deathParticle;
     public GameObject[] enemies;
     public Transform[] poses;
 
@@ -14,6 +16,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = FindObjectOfType(typeof(Player)) as Player;
+
+        playerStats = GetComponent<PlayerStats>();
         InvokeRepeating("EnemySpawn", time, repeatRate);   
     }
 
@@ -23,6 +28,13 @@ public class GameManager : MonoBehaviour
         if(remainingEnemies == killEnemies)
         {
             finishLevel.SetActive(true);
+        }
+        if(playerStats.playerHp<=0)
+        {
+            Instantiate(deathParticle, player.transform.position, transform.rotation);
+
+            Destroy(player.gameObject);
+            gameOverScreen.SetActive(true);
         }
     }
 

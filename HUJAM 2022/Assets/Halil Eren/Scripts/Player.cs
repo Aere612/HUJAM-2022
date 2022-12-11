@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     public int weaponIndex;
     public GameObject pewpew, sniper, laser, shootgun, assault;
-    public Animator engineAnimator;
+    public Animator engineAnimator, damageAnim;
     Rigidbody2D rb;
 
     void Start()

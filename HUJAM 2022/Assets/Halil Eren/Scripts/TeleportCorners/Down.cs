@@ -10,5 +10,9 @@ public class Down : MonoBehaviour
         {
             collision.gameObject.transform.position = new Vector2(collision.transform.position.x, collision.transform.position.y + 12.7f);
         }
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            collision.gameObject.transform.position = new Vector2(collision.transform.position.x, collision.transform.position.y + 12.7f);
+        }
     }
 }

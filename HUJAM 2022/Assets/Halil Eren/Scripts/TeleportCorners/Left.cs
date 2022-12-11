@@ -10,5 +10,9 @@ public class Left : MonoBehaviour
         {
             collision.gameObject.transform.position = new Vector2(collision.transform.position.x + 22, collision.transform.position.y);
         }
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            collision.gameObject.transform.position = new Vector2(collision.transform.position.x + 22, collision.transform.position.y);
+        }
     }
 }

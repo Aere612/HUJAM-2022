@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public int weaponIndex;
     public float maxPlayerHp;
+
+    public int weaponIndex;
     public float playerHp;
     public float movementSpeed;
     public float bulletPerSecond;

@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class EnemyRWE : MonoBehaviour
 {
+    public GameManager gameManager;
     int randomDýrection = 0;
     public float enemyHp = 3f;
     public GameObject hitEffect, currentHitEffect;
 
     void Start()
     {
+        gameManager = FindObjectOfType(typeof(GameManager)) as GameManager;
+
         randomDýrection = Random.Range(-5, 6);
     }
 
+    private void Update()
+    {
+        if(enemyHp<=0)
+        {
+            currentHitEffect = Instantiate(hitEffect, transform);
+            gameManager.killEnemies++;
+            Destroy(gameObject);
+        }
+    }
 
 
     void FixedUpdate()

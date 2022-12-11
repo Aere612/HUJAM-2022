@@ -123,12 +123,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   components:
   - {fileID: -9119479383214684620}
-  - {fileID: 8644116526082593097}
   - {fileID: -3477382962699996492}
   - {fileID: 7775213969651795792}
   - {fileID: 2499864864445445688}
   - {fileID: -4202200791064338148}
   - {fileID: -5261443142936359929}
+  - {fileID: 8644116526082593097}
 --- !u!114 &2499864864445445688
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
   m_Name: ChromaticAberration
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   intensity:
     m_OverrideState: 1
     m_Value: 0.15
