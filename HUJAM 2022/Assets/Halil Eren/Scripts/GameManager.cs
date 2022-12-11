@@ -10,12 +10,15 @@ public class GameManager : MonoBehaviour
     public GameObject[] enemies;
     public Transform[] poses;
 
+    public bool isSpawn;
     public float time, repeatRate;
-    public int remainingEnemies, killEnemies;
+    public int remainingEnemies, killEnemies, gelmesiGerekenDusmanSayisi;
+    int gelenDusmanSayisi;
 
     // Start is called before the first frame update
     void Start()
     {
+        isSpawn = true;
         player = FindObjectOfType(typeof(Player)) as Player;
 
         playerStats = GetComponent<PlayerStats>();
@@ -25,6 +28,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(gelenDusmanSayisi==gelmesiGerekenDusmanSayisi)
+        {
+            isSpawn = false;
+        }
         if(remainingEnemies == killEnemies)
         {
             finishLevel.SetActive(true);
@@ -40,9 +47,14 @@ public class GameManager : MonoBehaviour
 
     void EnemySpawn()
     {
-        int randomEnemyIndex, randomPosIndex;
-        randomEnemyIndex = Random.Range(0, enemies.Length);
-        randomPosIndex = Random.Range(0, poses.Length);
-        Instantiate(enemies[randomEnemyIndex], poses[randomPosIndex].transform.position, transform.rotation);
+        if(isSpawn)
+        {
+            int randomEnemyIndex, randomPosIndex;
+            randomEnemyIndex = Random.Range(0, enemies.Length);
+            randomPosIndex = Random.Range(0, poses.Length);
+            Instantiate(enemies[randomEnemyIndex], poses[randomPosIndex].transform.position, transform.rotation);
+            gelenDusmanSayisi++;
+        }
+        
     }
 }

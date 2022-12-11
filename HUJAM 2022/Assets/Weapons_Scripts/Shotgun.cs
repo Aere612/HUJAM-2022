@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class Shotgun : MonoBehaviour
 {
+    public int subClassIndex;//1 ise turbo 2 ise bayonet
     public GameObject bullet, currentBullet;
     public bool allowed = true, subAllowed = true, isTurbo = false, isBayonet = false;
+    private void Start()
+    {
+        subClassIndex = PlayerPrefs.GetInt("shotgunSubClass");
+        //Burada 1 ya da 2 deðeri geliyor secime gore. Ona gore dongude 0 ya da 1 olma durumu ele alýncak
+    }
     private void Update()
     {
         if (Input.GetKey(KeyCode.Mouse0) && allowed)
@@ -13,12 +19,12 @@ public class Shotgun : MonoBehaviour
             allowed = false;
             StartCoroutine(BulletSpawner());
         }
-        if (Input.GetKey(KeyCode.Mouse1) && subAllowed && isTurbo)
+        if (Input.GetMouseButtonDown(1) && subAllowed && isTurbo)
         {
             subAllowed = false;
             StartCoroutine(Turbo());
         }
-        if (Input.GetKey(KeyCode.Mouse1) && subAllowed && isBayonet)
+        if (Input.GetMouseButtonDown(1) && subAllowed && isBayonet)
         {
             subAllowed = false;
             StartCoroutine(Bayonet());

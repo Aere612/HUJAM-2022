@@ -638,6 +638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ec08099ee9df74f8a864a5e6f483a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subClassIndex: 0
   bullet: {fileID: 6079509189384377777, guid: 6e202cdc2aca89749af64a87c58b0068, type: 3}
   currentBullet: {fileID: 0}
   allowed: 1
@@ -1269,10 +1270,12 @@ MonoBehaviour:
   - {fileID: 1538099728}
   - {fileID: 1380928155}
   - {fileID: 803847603}
+  isSpawn: 0
   time: 5
   repeatRate: 5
   remainingEnemies: 15
   killEnemies: 0
+  gelmesiGerekenDusmanSayisi: 0
 --- !u!114 &284078062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1669,7 +1672,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: _Level 4_
+  m_text: AD 3004
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1702,7 +1705,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 5
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -3864,6 +3867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67ed044fbea8acf40aec777aa0ccbd30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subClassIndex: 0
   bullet: {fileID: 6079509189384377777, guid: 7160c5d865b071c47b4e31ee323bc934, type: 3}
   currentBullet: {fileID: 0}
   allowed: 1
@@ -6470,6 +6474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca4c7e2c8869194497b7b6e81b3e799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subClassIndex: 0
   bullet: {fileID: 6079509189384377777, guid: 7393a9c548bc3ac4fbeb39e4f27ecec5, type: 3}
   currentBullet: {fileID: 0}
   allowed: 1

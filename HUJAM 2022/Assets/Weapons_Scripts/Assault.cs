@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class Assault : MonoBehaviour
 {
+    public int subClassIndex;
     public GameObject bullet, currentBullet;
     public bool allowed = true, subAllowed = true, isPatriot = false, isTank = false;
+    private void Start()
+    {
+        subClassIndex = PlayerPrefs.GetInt("asaultSubClass");
+        //Burada 1 ya da 2 deðeri geliyor secime gore. Ona gore dongude 0 ya da 1 olma durumu ele alýncak
+    }
     private void Update()
     {
         if (Input.GetKey(KeyCode.Mouse0) && allowed)

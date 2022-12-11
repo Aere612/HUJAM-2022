@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BossDefeatable : MonoBehaviour//34
 {
+    public GameObject timeLine;
     public int counter = 0;
     public GameObject currentBullet, bullet, sniperBullet, hitEffect, currentHitEffect;
     public float bossHP = 1000f;
@@ -31,7 +32,7 @@ public class BossDefeatable : MonoBehaviour//34
         }
         if (bossHP <= 0)
         {
-            //death
+            timeLine.SetActive(true);
         }
     }
     void Snipe()

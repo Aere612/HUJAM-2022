@@ -17,4 +17,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Halil Eren/Scenes/Level4.unity
     guid: 01e2a1a0c4ea5f242b745f881a00352c
+  - enabled: 1
+    path: Assets/Halil Eren/Scenes/Level5.unity
+    guid: 156d108f761ad544e84ed759526b4e0d
+  - enabled: 1
+    path: Assets/Halil Eren/Scenes/Level6.unity
+    guid: 3d61309c939c41d4e97a93c13a153858
+  - enabled: 1
+    path: Assets/Halil Eren/Scenes/Level7.unity
+    guid: 1d71808e20c267f48ac04317f003117a
+  - enabled: 1
+    path: Assets/Halil Eren/Scenes/Level8.unity
+    guid: 2344409560fbb664a945a2a4b796f5a3
+  - enabled: 1
+    path: Assets/Halil Eren/Scenes/Level9.unity
+    guid: 29c0f036a3f2e95419327e680c5c9b3d
+  - enabled: 1
+    path: Assets/Scenes/FinalBossFight.unity
+    guid: dab8b63f47cba8341936400dde85e698
   m_configObjects: {}

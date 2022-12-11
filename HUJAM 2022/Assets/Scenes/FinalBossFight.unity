@@ -420,7 +420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &59235064
 Animator:
   serializedVersion: 4
@@ -1068,7 +1068,7 @@ MonoBehaviour:
   laser: {fileID: 0}
   shootgun: {fileID: 2082789019}
   assault: {fileID: 1611536107}
-  particle: {fileID: 0}
+  particle: {fileID: 6821180047405435631, guid: 50b5fd277245069428e48edfcca10395, type: 3}
   engineAnimator: {fileID: 1796786295}
 --- !u!60 &724358672
 PolygonCollider2D:
@@ -2440,9 +2440,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1851391554120726579, guid: 6f1e62e28823e1141b08a7fc147768e4, type: 3}
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 1156166476}
+    - target: {fileID: 1851391554120726579, guid: 6f1e62e28823e1141b08a7fc147768e4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 724358666}
+    - target: {fileID: 1851391554120726579, guid: 6f1e62e28823e1141b08a7fc147768e4, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 1112541127}
+    - target: {fileID: 1851391554120726579, guid: 6f1e62e28823e1141b08a7fc147768e4, type: 3}
+      propertyPath: timeLine
+      value: 
+      objectReference: {fileID: 2008178216}
     - target: {fileID: 8965747096851678037, guid: 6f1e62e28823e1141b08a7fc147768e4, type: 3}
       propertyPath: m_Name
       value: Boss

@@ -62,4 +62,8 @@ public class SelectSkill : MonoBehaviour
         playerStats.bulletSpeed += 0.1f;
         PlayerPrefs.SetFloat("bulletSpeed", playerStats.bulletSpeed);
     }
+    public void AsaultSubSkill()
+    {
+
+    }
 }
