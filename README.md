@@ -95,7 +95,8 @@
 - secret ending boss fightta savasmazsan dusman da saldirmayi birakir good ending
 - weapon combination at level 15
 - Plasma barriers
--Drunk enemies
+- Drunk enemies
+- Color Changing Player
 
 # NOTES
 - bps:bullet per second
