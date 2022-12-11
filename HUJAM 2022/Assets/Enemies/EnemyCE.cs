@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class EnemyCE : MonoBehaviour
 {
-    public GameObject damageReport;
-    public GameObject bullet;
     public float enemyHp
 ;   public float speed=5f;
     public Transform target;   
