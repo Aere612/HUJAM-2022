@@ -25,6 +25,17 @@ public class Boss : MonoBehaviour
         {
             transform.Translate(Vector2.up);
         }
+        for (int counter = 0; counter != 10; counter++)
+        {
+            currentBullet = Instantiate(bullet, transform.position, transform.rotation);
+            currentBullet.transform.Rotate(0f, 0f, counter * 6f - 30f);
+        }
+        while (transform.position.x > -5.8f)
+        {
+            transform.Translate(Vector2.left);
+            transform.Rotate(0f, 0f, 3f);
+        }
+
 
         yield return new WaitForSeconds(0.1f);
     }

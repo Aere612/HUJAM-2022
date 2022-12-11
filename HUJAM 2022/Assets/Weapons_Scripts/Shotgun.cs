@@ -28,8 +28,8 @@ public class Shotgun : MonoBehaviour
     {
         for (int counter = 0; counter != 10; counter++)
         {
-            currentBullet = Instantiate(bullet);
-            currentBullet.transform.rotation = new(currentBullet.transform.rotation.x, currentBullet.transform.rotation.y, currentBullet.transform.rotation.z + (Random.Range(-45, 45)), 0f);
+            currentBullet = Instantiate(bullet, transform.position, transform.rotation);
+            currentBullet.transform.Rotate(0f, 0f, counter*6f-30f);
         }
         yield return new WaitForSeconds(1 / GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletPerSecond);
         allowed = true;
