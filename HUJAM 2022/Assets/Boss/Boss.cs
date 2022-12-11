@@ -8,6 +8,7 @@ public class Boss : MonoBehaviour//34
     public GameObject currentBullet, bullet, sniperBullet, hitEffect, currentHitEffect;
     public float bossHP = 1000f;
     public bool once = true;
+    public Animator animator;
     private void OnTriggerEnter2D(Collider2D collision)
     {
 #pragma warning disable UNT0002 // Inefficient tag comparison
@@ -26,6 +27,7 @@ public class Boss : MonoBehaviour//34
     {
         if (bossHP < 1000 && once)
         {
+            animator.enabled = false;
             StartCoroutine(Go());
             once = false;
         }
@@ -47,7 +49,9 @@ public class Boss : MonoBehaviour//34
         {
             currentBullet = Instantiate(bullet, transform.position, transform.rotation);
             currentBullet.transform.Rotate(0f, 0f, counter * 6f - 30f);
+            currentBullet.GetComponent<EnemyBullet>().damage =10;
         }
+        
     }
     void Shot()
     {
@@ -58,7 +62,7 @@ public class Boss : MonoBehaviour//34
     {
 
         Shotgun();
-        while (transform.position.y < 3.5f)
+        while (transform.position.y < 4.35f)
         {
             yield return new WaitForSeconds(0.01f);
             transform.Translate(new Vector2(0f, 0.04f), Space.World);
@@ -80,7 +84,7 @@ public class Boss : MonoBehaviour//34
             transform.Rotate(0f, 0f, -1f);
         }
         Shotgun();
-        while (transform.position.y > -3f)
+        while (transform.position.y > -3.5f)
         {
             yield return new WaitForSeconds(0.01f);
             transform.Translate(new Vector2(0f, -0.1f), Space.World);
@@ -98,7 +102,7 @@ public class Boss : MonoBehaviour//34
 #pragma warning disable CS0618 // Type or member is obsolete
         currentHitEffect.GetComponent<ParticleSystem>().maxParticles = 10;
 #pragma warning restore CS0618 // Type or member is obsolete
-        while (counter != 30)
+        while (counter != 50)
         {
             yield return new WaitForSeconds(0.001f);
             transform.Rotate(0f, 0f, 1f);
@@ -110,7 +114,7 @@ public class Boss : MonoBehaviour//34
 #pragma warning disable CS0618 // Type or member is obsolete
         currentHitEffect.GetComponent<ParticleSystem>().maxParticles = 10;
 #pragma warning restore CS0618 // Type or member is obsolete
-        while (counter != 60)
+        while (counter != 40)
         {
             yield return new WaitForSeconds(0.001f);
             transform.Rotate(0f, 0f, -1f);
@@ -151,9 +155,10 @@ public class Boss : MonoBehaviour//34
         {
             yield return new WaitForSeconds(0.01f);
             transform.Translate(new Vector2(0.3f, 0.25f), Space.World);
-            transform.Rotate(0f, 0f, -5.85f);
+            transform.Rotate(0f, 0f, -16.3f);
             counter++;
         }
+        transform.rotation=new Quaternion(0f, 0f, 180f,0);
         counter = 0;
         while (counter != 360)
         {

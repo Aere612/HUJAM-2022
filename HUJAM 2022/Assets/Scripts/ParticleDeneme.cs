@@ -16,7 +16,7 @@ public class ParticleDeneme : MonoBehaviour
     }
     void Update()
     {
-        if(playerStats.playerHp <= 0)
+        if(playerStats.playerHp < 0)
         {
             Explode();
         }

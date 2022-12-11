@@ -8,9 +8,13 @@ public class Player : MonoBehaviour
     public GameObject pewpew, sniper, laser, shootgun, assault, particle;
     public Animator engineAnimator;
     Rigidbody2D rb;
-
+    void latency()
+    {
+        transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
+    }
     void Start()
     {
+        Invoke("latency", 1);
         weaponIndex = PlayerPrefs.GetInt("weaponIndex");
 
         rb = GetComponent<Rigidbody2D>();
