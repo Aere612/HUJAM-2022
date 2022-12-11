@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ec08099ee9df74f8a864a5e6f483a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 6079509189384377777, guid: 7c8f052b626d88a43ad3b1d95bea5bd1, type: 3}
+  bullet: {fileID: 6079509189384377777, guid: 6e202cdc2aca89749af64a87c58b0068, type: 3}
   currentBullet: {fileID: 0}
   allowed: 1
   subAllowed: 1
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 562b3fb9040eae44e80f72fba95d8475, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 6079509189384377777, guid: 7c8f052b626d88a43ad3b1d95bea5bd1, type: 3}
+  bullet: {fileID: 6079509189384377777, guid: 7160c5d865b071c47b4e31ee323bc934, type: 3}
   currentBullet: {fileID: 0}
   allowed: 1
 --- !u!1 &7844932933735050853
@@ -301,11 +301,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponIndex: 0
-  pewpew: {fileID: 0}
-  sniper: {fileID: 0}
-  laser: {fileID: 0}
-  shootgun: {fileID: 0}
-  assault: {fileID: 0}
+  pewpew: {fileID: 7844932933488514482}
+  sniper: {fileID: 7844932932682386951}
+  laser: {fileID: 7844932932670668119}
+  shootgun: {fileID: 7844932934074628725}
+  assault: {fileID: 7844932934074628725}
   engineAnimator: {fileID: 0}
 --- !u!50 &7844932933735050849
 Rigidbody2D:
