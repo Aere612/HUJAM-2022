@@ -234,7 +234,7 @@ Transform:
   - {fileID: 7844932934074628722}
   - {fileID: 7844932933291962579}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7844932933735050850
 SpriteRenderer:
@@ -300,6 +300,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1119afd2acfd95f489efadcb3168021a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponIndex: 0
+  pewpew: {fileID: 0}
+  sniper: {fileID: 0}
+  laser: {fileID: 0}
+  shootgun: {fileID: 0}
+  assault: {fileID: 0}
+  engineAnimator: {fileID: 0}
 --- !u!50 &7844932933735050849
 Rigidbody2D:
   serializedVersion: 4
