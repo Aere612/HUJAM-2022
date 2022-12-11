@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7675481910306992084}
   - component: {fileID: 7228609948789353376}
   m_Layer: 0
-  m_Name: Square 1
+  m_Name: pewpewAssaultEnemy
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
