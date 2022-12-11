@@ -41,6 +41,8 @@ public class Sniper : MonoBehaviour
         currentBullet = Instantiate(bullet, transform.position, transform.rotation);
         yield return new WaitForSeconds(0.0001f);
         currentBullet.GetComponent<Bullet>().damage = currentBullet.GetComponent<Bullet>().damage *5;
+        currentBullet.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 5f;
+        currentBullet.GetComponent<SpriteRenderer>().color = new Color(0,0.3f , 1, 1);
         yield return new WaitForSeconds(10f);
         subAllowed = true;
     }
