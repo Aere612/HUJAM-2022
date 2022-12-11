@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     {
         damage = GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().damagePerBullet;
         speed = GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletSpeed;
+        Destroy(gameObject, 4.9857f);
     }
     void Update()
     {

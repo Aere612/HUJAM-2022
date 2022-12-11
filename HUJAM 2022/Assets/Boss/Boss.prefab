@@ -146,8 +146,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ebee14d94a45ba4a95520b0e4fedfe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  counter: 0
   currentBullet: {fileID: 0}
-  bullet: {fileID: 6079509189384377777, guid: ec4571e1edcc23e4aa13b7d5e7755ec1, type: 3}
-  hitEffect: {fileID: 6821180047405435631, guid: 50b5fd277245069428e48edfcca10395, type: 3}
+  bullet: {fileID: 6079509189384377777, guid: 562eeec45b92dbe40bf2e8b4de966719, type: 3}
+  sniperBullet: {fileID: 6079509189384377777, guid: adf7e76dfcd592941b0dd309780cd7b4, type: 3}
+  hitEffect: {fileID: 6821180047405435631, guid: 70772c6a6ec7cf041a8619f015e281d4, type: 3}
   currentHitEffect: {fileID: 0}
   bossHP: 1000
+  once: 1

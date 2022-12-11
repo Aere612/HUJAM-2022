@@ -9,4 +9,8 @@ public class EnemyBullet : MonoBehaviour
     {
         transform.Translate(new Vector3(0f, speed, transform.position.z), Space.Self);
     }
+    private void Start()
+    {
+        Destroy(this.gameObject, 4.9f);
+    }
 }
