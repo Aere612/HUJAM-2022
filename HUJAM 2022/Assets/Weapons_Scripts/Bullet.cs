@@ -5,7 +5,6 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float damage,speed;
-    Vector3 addSpeed;
     public void Start()
     {
         damage = GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().damagePerBullet;

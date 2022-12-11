@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8965747096851678039}
   - component: {fileID: 8965747096851678038}
+  - component: {fileID: 1851391554120726579}
   - component: {fileID: 8965747096851678025}
   - component: {fileID: 8965747096851678024}
-  - component: {fileID: 1851391554120726579}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8965747096851678038
 SpriteRenderer:
@@ -87,6 +87,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1851391554120726579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8965747096851678037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ebee14d94a45ba4a95520b0e4fedfe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counter: 0
+  currentBullet: {fileID: 0}
+  bullet: {fileID: 6079509189384377777, guid: 5a68ce9b6361bdb4bbfc632577e4dc02, type: 3}
+  sniperBullet: {fileID: 6079509189384377777, guid: ad658c22f2052d34db1ede824801ac8c, type: 3}
+  hitEffect: {fileID: 6821180047405435631, guid: 50b5fd277245069428e48edfcca10395, type: 3}
+  currentHitEffect: {fileID: 0}
+  bossHP: 1000
+  once: 1
 --- !u!50 &8965747096851678025
 Rigidbody2D:
   serializedVersion: 4
@@ -134,20 +154,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5586791, y: 1.9920874}
   m_EdgeRadius: 0
---- !u!114 &1851391554120726579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8965747096851678037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ebee14d94a45ba4a95520b0e4fedfe1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentBullet: {fileID: 0}
-  bullet: {fileID: 6079509189384377777, guid: ec4571e1edcc23e4aa13b7d5e7755ec1, type: 3}
-  hitEffect: {fileID: 6821180047405435631, guid: 50b5fd277245069428e48edfcca10395, type: 3}
-  currentHitEffect: {fileID: 0}
-  bossHP: 1000
