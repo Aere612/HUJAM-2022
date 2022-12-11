@@ -5,8 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public int weaponIndex;
-    public GameObject pewpew, sniper, laser, shootgun, assault;
-    public Animator engineAnimator, damageAnim;
+    public GameObject pewpew, sniper, laser, shootgun, assault, particle;
+    public Animator engineAnimator;
     Rigidbody2D rb;
 
     void Start()
@@ -57,6 +57,14 @@ public class Player : MonoBehaviour
         else
         {
             engineAnimator.SetBool("force", false);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            Instantiate(particle, transform.position, transform.rotation);
         }
     }
 }

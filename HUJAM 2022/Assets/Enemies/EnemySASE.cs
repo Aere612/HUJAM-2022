@@ -9,7 +9,6 @@ public class EnemySASE : MonoBehaviour
     public float enemyHp=3f;
     public float speed = 5f;
     float fireRate=1f, nextFire;
-    public Transform target;
     public bool chase = true;
     public GameObject hitEffect, currentHitEffect;
     void Start()
@@ -49,11 +48,11 @@ public class EnemySASE : MonoBehaviour
     }
     void EnemyChase()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }
     IEnumerator ChaseAndStop()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.35f);
         chase = false;
     }
     private void OnTriggerEnter2D(Collider2D collision)

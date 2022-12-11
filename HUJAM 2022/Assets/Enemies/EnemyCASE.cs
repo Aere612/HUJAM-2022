@@ -9,7 +9,6 @@ public class EnemyCASE : MonoBehaviour
     public float enemyHp=3f; 
     public float speed = 5f;
     float fireRate = 1f, nextFire;
-    public Transform target;
     public bool chase = true;
     public GameObject hitEffect, currentHitEffect;
     void Start()
@@ -48,7 +47,7 @@ public class EnemyCASE : MonoBehaviour
     }
     void EnemyChase()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }
     IEnumerator ChaseAndStop()
     {

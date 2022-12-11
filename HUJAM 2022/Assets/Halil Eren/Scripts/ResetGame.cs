@@ -7,8 +7,10 @@ public class ResetGame : MonoBehaviour
     public PlayerStats playerStats;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        playerStats.weaponIndex = 0;
+        PlayerPrefs.SetFloat("weaponIndex", playerStats.weaponIndex);
         playerStats.playerHp = 100;
         PlayerPrefs.SetFloat("playerHp", playerStats.playerHp);
         playerStats.movementSpeed = 0.01f;

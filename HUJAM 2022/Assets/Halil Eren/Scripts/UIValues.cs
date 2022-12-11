@@ -18,8 +18,14 @@ public class UIValues : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (playerStats.playerHp <= 0)
+        {
+            playerStats.playerHp = 0;
+        }
         killEnemyText.text = gameManager.killEnemies.ToString();
         remainigEnemyText.text = gameManager.remainingEnemies.ToString();
         hpText.text =playerStats.playerHp.ToString();
+
+       
     }
 }

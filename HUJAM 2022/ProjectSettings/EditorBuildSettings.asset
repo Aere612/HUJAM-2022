@@ -10,5 +10,11 @@ EditorBuildSettings:
     guid: b34728701d7f219478178f0ac45ed860
   - enabled: 1
     path: Assets/Halil Eren/Scenes/Level2.unity
-    guid: babb2b73076343549a287024fbe911e6
+    guid: 4c9807b3d70ddfb4d8434f0281e47239
+  - enabled: 1
+    path: Assets/Halil Eren/Scenes/Level3.unity
+    guid: e3bee4d86c21d8e46baa1acb0cd1231b
+  - enabled: 1
+    path: Assets/Halil Eren/Scenes/Level4.unity
+    guid: 01e2a1a0c4ea5f242b745f881a00352c
   m_configObjects: {}

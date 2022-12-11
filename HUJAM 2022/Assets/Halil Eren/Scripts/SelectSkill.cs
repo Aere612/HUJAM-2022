@@ -20,27 +20,27 @@ public class SelectSkill : MonoBehaviour
     public void CanArtir()
     {
         playerStats.playerHp += 25;
-        PlayerPrefs.SetFloat("playerHP", playerStats.playerHp);
+        PlayerPrefs.SetFloat("playerHp", playerStats.playerHp);
     }
     public void SilahDegismeSniper()
     {
         playerStats.weaponIndex = 1;
-        PlayerPrefs.SetInt("weponIndex", playerStats.weaponIndex);
+        PlayerPrefs.SetInt("weaponIndex", playerStats.weaponIndex);
     }
     public void SilahDegismeLaser()
     {
         playerStats.weaponIndex = 2;
-        PlayerPrefs.SetInt("weponIndex", playerStats.weaponIndex);
+        PlayerPrefs.SetInt("weaponIndex", playerStats.weaponIndex);
     }
     public void SilahDegismeShootgun()
     {
         playerStats.weaponIndex = 3;
-        PlayerPrefs.SetInt("weponIndex", playerStats.weaponIndex);
+        PlayerPrefs.SetInt("weaponIndex", playerStats.weaponIndex);
     }
     public void SilahDegismeAssult()
     {
         playerStats.weaponIndex = 4;
-        PlayerPrefs.SetInt("weponIndex", playerStats.weaponIndex);
+        PlayerPrefs.SetInt("weaponIndex", playerStats.weaponIndex);
     }
     public void HareketHiziArtir()
     {
