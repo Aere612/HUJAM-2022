@@ -5,17 +5,45 @@ using UnityEngine;
 public class EnemyCE : MonoBehaviour
 {
     public float enemyHp
-;   public float speed=5f;
-    public Transform target;   
+;   public float speed=3f;
+    public Transform target;
+    public Player player;
+    public GameObject hitEffect, currentHitEffect;
     void Update()
     {
         EnemyChase();
+        Rotate();
     }
     void EnemyChase()
     {
         transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
-   
-    
+    void Rotate()
+    {
+        Vector3 vectorToTarget = player.transform.position - transform.position;
+        float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg - 90f;
+        Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+        transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * 5f);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.tag == "Bullet")
+        {
+            enemyHp -= collision.gameObject.GetComponent<Bullet>().damage;
+            currentHitEffect = Instantiate(hitEffect, transform);
+            currentHitEffect.GetComponent<ParticleSystem>().maxParticles = (int)collision.gameObject.GetComponent<Bullet>().damage;
+            Destroy(collision.gameObject);
+        }
+        if (collision.transform.tag == "Player")
+        {
+            GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().playerHp -= 20;
+            currentHitEffect = Instantiate(hitEffect, transform);
+            currentHitEffect.GetComponent<ParticleSystem>().maxParticles = 10;
+            transform.GetChild(0).SetParent(null);
+            Destroy(gameObject);
+        }
+    }
+
+
 }
 

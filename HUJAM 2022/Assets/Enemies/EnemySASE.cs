@@ -6,11 +6,12 @@ public class EnemySASE : MonoBehaviour
 {
     public GameObject Bullet;
     public Player player;
-    public float enemyHp;
+    public float enemyHp=3f;
     public float speed = 5f;
     float fireRate=1f, nextFire;
     public Transform target;
     public bool chase = true;
+    public GameObject hitEffect, currentHitEffect;
     void Start()
 
     {
@@ -55,4 +56,25 @@ public class EnemySASE : MonoBehaviour
         yield return new WaitForSeconds(1f);
         chase = false;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.tag == "Bullet")
+        {
+            enemyHp -= collision.gameObject.GetComponent<Bullet>().damage;
+            currentHitEffect = Instantiate(hitEffect, transform);
+            currentHitEffect.GetComponent<ParticleSystem>().maxParticles = (int)collision.gameObject.GetComponent<Bullet>().damage;
+            Destroy(collision.gameObject);
+        }
+        if (collision.transform.tag == "Player")
+        {
+            GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().playerHp -= 20;
+            currentHitEffect = Instantiate(hitEffect, transform);
+            currentHitEffect.GetComponent<ParticleSystem>().maxParticles = 10;
+            transform.GetChild(0).SetParent(null);
+            Destroy(gameObject);
+        }
+    }
+
+
+
 }
