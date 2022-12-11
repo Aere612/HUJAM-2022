@@ -561,12 +561,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724358666}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7979060de24eabf4d814abbf12b26293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerDeathParticle: {fileID: 618482018861905707, guid: bc9b4f02e655f5843ac1424a56b0d0ae, type: 3}
+  activetedObjects:
+  - {fileID: 1009765972}
+  - {fileID: 1651052834}
+  - {fileID: 691093865}
+  - {fileID: 1137162173}
+  - {fileID: 1830328357}
+  - {fileID: 1958274320}
+  playerDeathParticle: {fileID: 7409858241611534329, guid: a368c414126b67741894b5a2b7ec0f21, type: 3}
 --- !u!114 &724358671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1017,7 +1024,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651052834}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.062619, y: -4.2407026, z: 0.1071204}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
