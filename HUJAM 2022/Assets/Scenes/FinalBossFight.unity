@@ -3526,13 +3526,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1651052834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45de77f39accc1c42a3f07895a23e586, type: 3}
+  m_Script: {fileID: 11500000, guid: 3be5cd435600ff04ebc691dca9589201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 1651052835}
   bossHpText: {fileID: 1737397834}
   playerHpText: {fileID: 1354213775}
-  boss: {fileID: 0}
+  boss: {fileID: 540879958}
 --- !u!1001 &1694443676
 PrefabInstance:
   m_ObjectHideFlags: 0

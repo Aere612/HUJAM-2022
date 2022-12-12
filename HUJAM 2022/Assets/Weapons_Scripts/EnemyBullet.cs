@@ -11,7 +11,7 @@ public class EnemyBullet : MonoBehaviour
     {
         playerStats = FindObjectOfType(typeof(PlayerStats)) as PlayerStats;
 
-        Destroy(this.gameObject, 4.9f);
+        Destroy(this.gameObject, 10f);
     }
     void Update()
     {

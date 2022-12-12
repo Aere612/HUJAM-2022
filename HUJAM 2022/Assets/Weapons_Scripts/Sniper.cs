@@ -9,8 +9,11 @@ public class Sniper : MonoBehaviour
     public bool allowed = true,subAllowed=true,isHunter=false,isAssassin=false;
     private void Start()
     {
+        GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().damagePerBullet=5;
+        GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletPerSecond=1;
+        GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletSpeed=0.2f;
         subClassIndex = PlayerPrefs.GetInt("sniperSubClass");
-        //Burada 1 ya da 2 deðeri geliyor secime gore. Ona gore dongude 0 ya da 1 olma durumu ele alýncak
+        //Burada 1 ya da 2 deï¿½eri geliyor secime gore. Ona gore dongude 0 ya da 1 olma durumu ele alï¿½ncak
     }
     private void Update()
     {

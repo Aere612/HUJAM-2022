@@ -9,8 +9,9 @@ public class Shotgun : MonoBehaviour
     public bool allowed = true, subAllowed = true, isTurbo = false, isBayonet = false;
     private void Start()
     {
+        
         subClassIndex = PlayerPrefs.GetInt("shotgunSubClass");
-        //Burada 1 ya da 2 deðeri geliyor secime gore. Ona gore dongude 0 ya da 1 olma durumu ele alýncak
+        //Burada 1 ya da 2 deï¿½eri geliyor secime gore. Ona gore dongude 0 ya da 1 olma durumu ele alï¿½ncak
     }
     private void Update()
     {

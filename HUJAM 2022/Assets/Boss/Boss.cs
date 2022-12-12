@@ -26,7 +26,7 @@ public class Boss : MonoBehaviour//34
     }
     void Update()
     {
-        if (bossHP < 1000 && once)
+        if (bossHP < 99999 && once)
         {
             animator.enabled = false;
             StartCoroutine(Go());

@@ -34,6 +34,10 @@ public class BossDefeatable : MonoBehaviour//34
         if (bossHP <= 0)
         {
             timeLine.SetActive(true);
+            Destroy(GameObject.Find("Canvas"));
+            Destroy(GameObject.Find("collapsedPlanet"));
+            Destroy(GameObject.Find("Player"));
+            Destroy(this.gameObject);
         }
     }
     void Snipe()

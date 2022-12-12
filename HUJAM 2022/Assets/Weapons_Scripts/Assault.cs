@@ -9,8 +9,11 @@ public class Assault : MonoBehaviour
     public bool allowed = true, subAllowed = true, isPatriot = false, isTank = false;
     private void Start()
     {
+        GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().damagePerBullet=2;
+        GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletPerSecond=5;
+        GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletSpeed=0.03f;
         subClassIndex = PlayerPrefs.GetInt("asaultSubClass");
-        //Burada 1 ya da 2 deðeri geliyor secime gore. Ona gore dongude 0 ya da 1 olma durumu ele alýncak
+        //Burada 1 ya da 2 deï¿½eri geliyor secime gore. Ona gore dongude 0 ya da 1 olma durumu ele alï¿½ncak
     }
     private void Update()
     {

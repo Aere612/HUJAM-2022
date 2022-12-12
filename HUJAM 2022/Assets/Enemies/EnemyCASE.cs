@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyCASE : MonoBehaviour
 {
+    public GameManager gameManager;
     public GameObject Bullet;
     public Player player;
     public float enemyHp=3f; 
@@ -14,6 +15,7 @@ public class EnemyCASE : MonoBehaviour
     void Start()
 
     {
+        gameManager = FindObjectOfType(typeof(GameManager)) as GameManager;
         nextFire = Time.time;
         StartCoroutine(ChaseAndStop());
         player = FindObjectOfType(typeof(Player)) as Player;
@@ -27,6 +29,12 @@ public class EnemyCASE : MonoBehaviour
         EnemyChase();
         
         Rotate();
+        if (enemyHp <= 0)
+        {
+            currentHitEffect = Instantiate(hitEffect, transform);
+            gameManager.killEnemies++;
+            Destroy(gameObject);
+        }
 
 
     }
