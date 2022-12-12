@@ -7,7 +7,7 @@ public class StartGameForPlayerStats : MonoBehaviour
     public PlayerStats playerStats;
     public void StartGame()
     {
-        playerStats.playerHp = 100;
+        playerStats.playerHp = playerStats.maxPlayerHp ;
         PlayerPrefs.SetFloat("playerHp", playerStats.playerHp);
         playerStats.movementSpeed = 0.01f;
         PlayerPrefs.SetFloat("movementSpeed", playerStats.movementSpeed);
