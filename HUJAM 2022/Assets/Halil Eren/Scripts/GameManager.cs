@@ -18,13 +18,17 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(PlayerPrefs.GetInt("shotgunSubClass"));
+        Debug.Log(PlayerPrefs.GetInt("sniperSubClass"));
+        Debug.Log(PlayerPrefs.GetInt("assaultSubClass"));
+
         if(PlayerPrefs.GetInt("shotgunSubClass")==1)
         {
             shotgun.GetComponent<Shotgun>().isTurbo=true;
         }else if(PlayerPrefs.GetInt("shotgunSubClass")==2){
             shotgun.GetComponent<Shotgun>().isBayonet=true;
         }
-        if(PlayerPrefs.GetInt("sniperSubClass")==2)
+        if(PlayerPrefs.GetInt("sniperSubClass")==1)
         {
             sniper.GetComponent<Sniper>().isHunter=true;
         }else if(PlayerPrefs.GetInt("sniperSubClass")==2){
