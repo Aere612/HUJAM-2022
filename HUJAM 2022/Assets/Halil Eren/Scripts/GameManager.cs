@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log(PlayerPrefs.GetInt("shotgunSubClass"));
         Debug.Log(PlayerPrefs.GetInt("sniperSubClass"));
-        Debug.Log(PlayerPrefs.GetInt("assaultSubClass"));
+        Debug.Log(PlayerPrefs.GetInt("asaultSubClass"));
 
         if(PlayerPrefs.GetInt("shotgunSubClass")==1)
         {
@@ -34,10 +34,10 @@ public class GameManager : MonoBehaviour
         }else if(PlayerPrefs.GetInt("sniperSubClass")==2){
             sniper.GetComponent<Sniper>().isAssassin=true;
         }
-        if(PlayerPrefs.GetInt("assaultSubClass")==1)
+        if(PlayerPrefs.GetInt("asaultSubClass")==1)
         {
             assault.GetComponent<Assault>().isPatriot=true;
-        }else if(PlayerPrefs.GetInt("assaultSubClass")==2){
+        }else if(PlayerPrefs.GetInt("asaultSubClass")==2){
             assault.GetComponent<Assault>().isTank=true;
         }
 
@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
             finishLevel.SetActive(true);
             Invoke("TimeStopper", 2f);
         }
-        if(playerStats.playerHp<=0)
+        if(playerStats.playerHp<=1f)
         {
             Instantiate(deathParticle, player.transform.position, transform.rotation);
 

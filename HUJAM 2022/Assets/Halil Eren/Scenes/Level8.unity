@@ -4884,7 +4884,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 284078062}
         m_TargetAssemblyTypeName: SelectSkill, Assembly-CSharp
-        m_MethodName: "MermiAt\u0131sHiziArtir"
+        m_MethodName: "MermiAt\xFDsHiziArtir"
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
