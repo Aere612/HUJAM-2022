@@ -12,7 +12,7 @@ public class AudioTuner : MonoBehaviour
     }
     IEnumerator audioTuner()
     {
-        while(auso.volume <= 0.03f)
+        while(auso.volume <= 0.04f)
         {
             auso.volume+=0.001f;
             yield return new WaitForSeconds(0.2f);
