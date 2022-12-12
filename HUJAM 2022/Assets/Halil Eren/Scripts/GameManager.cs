@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1.0f;
         isSpawn = true;
         player = FindObjectOfType(typeof(Player)) as Player;
 
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour
         if(remainingEnemies == killEnemies)
         {
             finishLevel.SetActive(true);
+            Invoke("TimeStopper", 2);
         }
         if(playerStats.playerHp<=0)
         {
@@ -56,5 +58,9 @@ public class GameManager : MonoBehaviour
             gelenDusmanSayisi++;
         }
         
+    }
+    void TimeStopper()
+    {
+        Time.timeScale = 0;
     }
 }

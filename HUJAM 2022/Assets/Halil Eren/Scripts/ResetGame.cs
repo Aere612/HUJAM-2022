@@ -11,7 +11,7 @@ public class ResetGame : MonoBehaviour
     {
         playerStats.weaponIndex = 0;
         PlayerPrefs.SetFloat("weaponIndex", playerStats.weaponIndex);
-        playerStats.playerHp = 100;
+        playerStats.playerHp = playerStats.maxPlayerHp;
         PlayerPrefs.SetFloat("playerHp", playerStats.playerHp);
         PlayerPrefs.SetFloat("maxPlayerHp", playerStats.maxPlayerHp);
         playerStats.movementSpeed = 0.01f;
