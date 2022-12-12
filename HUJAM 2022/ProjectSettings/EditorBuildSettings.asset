@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/IntroScene.unity
+    guid: ad30f5c9e327cf149a16b25bac4214c3
+  - enabled: 1
     path: Assets/Halil Eren/Scenes/Level1.unity
     guid: b34728701d7f219478178f0ac45ed860
   - enabled: 1
