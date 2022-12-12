@@ -32,9 +32,11 @@ public class Assault : MonoBehaviour
     }
     IEnumerator BulletSpawner()
     {
-        currentBullet = Instantiate(bullet, transform.position, transform.rotation); 
+        currentBullet = Instantiate(bullet, transform.position, transform.rotation);
+        
         yield return new WaitForSeconds(1 / GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().bulletPerSecond);
         allowed = true;
+
     }
     IEnumerator Patriot()
     {

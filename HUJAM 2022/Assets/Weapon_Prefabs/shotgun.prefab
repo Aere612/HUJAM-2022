@@ -56,6 +56,7 @@ MonoBehaviour:
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
@@ -122,6 +123,7 @@ GameObject:
   - component: {fileID: 6509221416779327362}
   - component: {fileID: 1106570856982183270}
   - component: {fileID: 7675481910306992084}
+  - component: {fileID: 6488488343126568039}
   - component: {fileID: 7228609948789353376}
   m_Layer: 0
   m_Name: shotgun
@@ -238,6 +240,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   speed: 0.1
+--- !u!114 &6488488343126568039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6079509189384377777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ffadfbab86fa147980647c35d6e7d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  clip: {fileID: 8300000, guid: 5b3db64711fae36428fc14fd358a005f, type: 3}
 --- !u!114 &7228609948789353376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,6 +278,7 @@ MonoBehaviour:
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2

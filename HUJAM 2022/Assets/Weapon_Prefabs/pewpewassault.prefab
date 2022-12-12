@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6509221416779327362}
   - component: {fileID: 1106570856982183270}
   - component: {fileID: 7675481910306992084}
+  - component: {fileID: -8590432951062035145}
   - component: {fileID: 7228609948789353376}
   - component: {fileID: 2842996718572271938}
   m_Layer: 0
@@ -129,6 +130,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   speed: 0.1
+--- !u!114 &-8590432951062035145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6079509189384377777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ffadfbab86fa147980647c35d6e7d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  clip: {fileID: 8300000, guid: 6fc750975d190a4479b5b31eada2e27a, type: 3}
 --- !u!114 &7228609948789353376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,6 +168,7 @@ MonoBehaviour:
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
@@ -284,6 +300,7 @@ MonoBehaviour:
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
