@@ -19,8 +19,9 @@ public class SelectSkill : MonoBehaviour
     }
     public void CanArtir()
     {
-        playerStats.playerHp += 25;
-        PlayerPrefs.SetFloat("playerHp", playerStats.playerHp);
+        
+        playerStats.maxPlayerHp += 25;
+        PlayerPrefs.SetFloat("maxPlayerHp", playerStats.maxPlayerHp);
     }
     public void SilahDegismeSniper()
     {

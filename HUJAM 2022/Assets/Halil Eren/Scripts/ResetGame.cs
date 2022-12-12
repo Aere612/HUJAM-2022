@@ -13,6 +13,7 @@ public class ResetGame : MonoBehaviour
         PlayerPrefs.SetFloat("weaponIndex", playerStats.weaponIndex);
         playerStats.playerHp = 100;
         PlayerPrefs.SetFloat("playerHp", playerStats.playerHp);
+        PlayerPrefs.SetFloat("maxPlayerHp", playerStats.maxPlayerHp);
         playerStats.movementSpeed = 0.01f;
         PlayerPrefs.SetFloat("movementSpeed", playerStats.movementSpeed);
         playerStats.bulletPerSecond = 1;

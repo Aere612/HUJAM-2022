@@ -16,7 +16,7 @@ public class PlayerStats : MonoBehaviour
     private void Start()
     {
         weaponIndex = PlayerPrefs.GetInt("weaponIndex");
-        playerHp = PlayerPrefs.GetFloat("playerHp");
+        playerHp = PlayerPrefs.GetFloat("maxPlayerHp");
         movementSpeed = PlayerPrefs.GetFloat("movementSpeed");
         bulletPerSecond = PlayerPrefs.GetFloat("bulletPerSecond");
         damagePerBullet = PlayerPrefs.GetFloat("damage");
