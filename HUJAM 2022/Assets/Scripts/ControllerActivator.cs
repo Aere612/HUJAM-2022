@@ -22,6 +22,12 @@ public class ControllerActivator : MonoBehaviour
             pewPewGun.SetActive(true);
         }
     }
+    private void Start()
+    {
+        PlayerPrefs.SetInt("shotgunSubClass", 0);
+        PlayerPrefs.SetInt("sniperSubClass", 0);
+        PlayerPrefs.SetInt("asaultSubClass", 0);
+    }
 
     private void SetAnimator()
     {

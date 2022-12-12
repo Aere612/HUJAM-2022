@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     }
     void Start()
     {
+        
         Invoke("latency", 1);
         weaponIndex = PlayerPrefs.GetInt("weaponIndex");
 
@@ -42,18 +43,18 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        // Mouse konumunun ve bu konuma göre açýnýn hesaplanmasý
+        // Mouse konumunun ve bu konuma gï¿½re aï¿½ï¿½nï¿½n hesaplanmasï¿½
         Vector3 mousePos = Input.mousePosition;
         mousePos = Camera.main.ScreenToWorldPoint(mousePos);
         Vector2 dir = new(mousePos.x - transform.position.x, mousePos.y - transform.position.y);
 
-        //Objeyi açýya göre çevrilmesi
+        //Objeyi aï¿½ï¿½ya gï¿½re ï¿½evrilmesi
         transform.up = dir;
 
-        //Klavye giriþi
+        //Klavye giriï¿½i
         if(Input.GetKey(KeyCode.W))
         {
-            //Hareketin objenin açýsýnýn ilerisine göre yapýlmasý
+            //Hareketin objenin aï¿½ï¿½sï¿½nï¿½n ilerisine gï¿½re yapï¿½lmasï¿½
             rb.AddForce(transform.up * GameObject.Find("Game Manager Object").GetComponent<PlayerStats>().movementSpeed, ForceMode2D.Impulse);
             engineAnimator.SetBool("force",true);
 

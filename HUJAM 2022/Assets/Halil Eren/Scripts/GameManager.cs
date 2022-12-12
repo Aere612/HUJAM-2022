@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     Player player;
     PlayerStats playerStats;
-    public GameObject finishLevel, gameOverScreen, deathParticle;
+    public GameObject finishLevel, gameOverScreen, deathParticle,shotgun,assault,sniper;
     public GameObject[] enemies;
     public Transform[] poses;
 
@@ -18,6 +18,25 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(PlayerPrefs.GetInt("shotgunSubClass")==1)
+        {
+            shotgun.GetComponent<Shotgun>().isTurbo=true;
+        }else if(PlayerPrefs.GetInt("shotgunSubClass")==2){
+            shotgun.GetComponent<Shotgun>().isBayonet=true;
+        }
+        if(PlayerPrefs.GetInt("sniperSubClass")==2)
+        {
+            sniper.GetComponent<Sniper>().isHunter=true;
+        }else if(PlayerPrefs.GetInt("sniperSubClass")==2){
+            sniper.GetComponent<Sniper>().isAssassin=true;
+        }
+        if(PlayerPrefs.GetInt("assaultSubClass")==1)
+        {
+            assault.GetComponent<Assault>().isPatriot=true;
+        }else if(PlayerPrefs.GetInt("assaultSubClass")==2){
+            assault.GetComponent<Assault>().isTank=true;
+        }
+
         Time.timeScale = 1.0f;
         isSpawn = true;
         player = FindObjectOfType(typeof(Player)) as Player;
