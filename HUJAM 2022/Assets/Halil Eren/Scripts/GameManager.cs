@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         if(remainingEnemies == killEnemies)
         {
             finishLevel.SetActive(true);
-            Invoke("TimeStopper", 2f);
+            Invoke("TimeStopper", 1.8f);
         }
         if(playerStats.playerHp<=1f)
         {

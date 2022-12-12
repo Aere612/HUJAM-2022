@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class DBossUiValues : MonoBehaviour
+public class DBossUIValues : MonoBehaviour
 {
     public PlayerStats playerStats;
     public TextMeshProUGUI bossHpText, playerHpText;
