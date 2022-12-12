@@ -9,6 +9,8 @@ public class reseter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerStats.weaponIndex = 0;
+        PlayerPrefs.SetFloat("weaponIndex",playerStats.weaponIndex);
         playerStats.playerHp = 100;
         PlayerPrefs.SetFloat("playerHp", playerStats.playerHp);
         playerStats.movementSpeed = 0.025f;

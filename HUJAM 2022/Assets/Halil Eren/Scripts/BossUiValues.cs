@@ -7,17 +7,17 @@ public class BossUiValues : MonoBehaviour
 {
     public PlayerStats playerStats;
     public TextMeshProUGUI bossHpText, playerHpText;
-    public Boss boss;
+    public GameObject boss;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
         playerHpText.text = playerStats.playerHp.ToString();
-        bossHpText.text = boss.bossHP.ToString();
+        bossHpText.text = boss.GetComponent<Boss>().bossHP.ToString();
     }
 }

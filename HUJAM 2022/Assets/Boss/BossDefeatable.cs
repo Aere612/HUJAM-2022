@@ -27,6 +27,7 @@ public class BossDefeatable : MonoBehaviour//34
     {
         if (bossHP < 1000 && once)
         {
+            GetComponent<Animator>().enabled=false;    
             StartCoroutine(Go());
             once = false;
         }
@@ -62,7 +63,7 @@ public class BossDefeatable : MonoBehaviour//34
         while (transform.position.y < 3.5f)
         {
             yield return new WaitForSeconds(0.01f);
-            transform.Translate(new Vector2(0f, 0.04f), Space.World);
+            transform.Translate(new Vector2(0f, 0.4f), Space.World);
         }
         Snipe();
         yield return new WaitForSeconds(0.0001f);
