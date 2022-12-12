@@ -11,6 +11,7 @@ public class ParticleDeneme : MonoBehaviour
     private PlayerStats playerStats;
     void Start()
     {
+        
         allObjects = FindObjectsOfType<GameObject>();
         playerStats = GameObject.Find("Game Manager Object").GetComponent<PlayerStats>();
     }

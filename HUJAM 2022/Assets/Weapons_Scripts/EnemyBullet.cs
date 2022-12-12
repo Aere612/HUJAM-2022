@@ -25,11 +25,6 @@ public class EnemyBullet : MonoBehaviour
             Instantiate(particle, transform.position, transform.rotation);
             Destroy(gameObject);
         }
-        if(collision.gameObject.CompareTag("Bullet"))
-        {
-            Instantiate(particleRed, transform.position, transform.rotation);
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
-        }
+        
     }
 }
