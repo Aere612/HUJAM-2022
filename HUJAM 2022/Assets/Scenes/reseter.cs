@@ -7,10 +7,13 @@ public class reseter : MonoBehaviour
     public PlayerStats playerStats;
 
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         playerStats.weaponIndex = 0;
         PlayerPrefs.SetFloat("weaponIndex",playerStats.weaponIndex);
+    }
+    void Start()
+    {
         playerStats.playerHp = 100;
         PlayerPrefs.SetFloat("playerHp", playerStats.playerHp);
         playerStats.movementSpeed = 0.025f;
